@@ -75,39 +75,40 @@ class MeritCalculator extends Component {
           <input type='text' name='totalMerits' value={this.state.totalMerits} onChange={this.handleChange} />
           <p>Available Merits: {this.state.totalMerits - this.state.spentMerits}</p>
         </div>
+        <div className='allUpgrades'>
+          <div className='upgrades'>
+            <Upgrade name='nerveBar' value={this.state.nerveBar} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='criticalHitRate' value={this.state.criticalHitRate} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='lifePoints' value={this.state.lifePoints} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='crimeExperience' value={this.state.crimeExperience} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='educationLength' value={this.state.educationLength} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='awareness' value={this.state.awareness} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='bankInterest' value={this.state.bankInterest} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='masterfulLooting' value={this.state.masterfulLooting} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='stealth' value={this.state.stealth} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='hospitalizing' value={this.state.hospitalizing} increase={this.increase} decrease={this.decrease} />
+          </div>
 
-        <div className='upgrades'>
-          <Upgrade name='nerveBar' value={this.state.nerveBar} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='criticalHitRate' value={this.state.criticalHitRate} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='lifePoints' value={this.state.lifePoints} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='crimeExperience' value={this.state.crimeExperience} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='educationLength' value={this.state.educationLength} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='awareness' value={this.state.awareness} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='bankInterest' value={this.state.bankInterest} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='masterfulLooting' value={this.state.masterfulLooting} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='stealth' value={this.state.stealth} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='hospitalizing' value={this.state.hospitalizing} increase={this.increase} decrease={this.decrease} />
-        </div>
+          <div className='stats'>
+            <Upgrade name='braun' value={this.state.braun} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='protection' value={this.state.protection} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='sharpness' value={this.state.sharpness} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='evasion' value={this.state.evasion} increase={this.increase} decrease={this.decrease} />
+          </div>
 
-        <div className='stats'>
-          <Upgrade name='braun' value={this.state.braun} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='protection' value={this.state.protection} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='sharpness' value={this.state.sharpness} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='evasion' value={this.state.evasion} increase={this.increase} decrease={this.decrease} />
-        </div>
-
-        <div className='weapons'>
-          <Upgrade name='heavyArtillery' value={this.state.heavyArtillery} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='machineGun' value={this.state.machineGun} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='rifle' value={this.state.rifle} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='smg' value={this.state.smg} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='shotgun' value={this.state.shotgun} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='pistol' value={this.state.pistol} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='club' value={this.state.club} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='piercing' value={this.state.piercing} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='slashing' value={this.state.slashing} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='mechanical' value={this.state.mechanical} increase={this.increase} decrease={this.decrease} />
-          <Upgrade name='temporary' value={this.state.temporary} increase={this.increase} decrease={this.decrease} />
+          <div className='weapons'>
+            <Upgrade name='heavyArtillery' value={this.state.heavyArtillery} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='machineGun' value={this.state.machineGun} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='rifle' value={this.state.rifle} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='smg' value={this.state.smg} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='shotgun' value={this.state.shotgun} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='pistol' value={this.state.pistol} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='club' value={this.state.club} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='piercing' value={this.state.piercing} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='slashing' value={this.state.slashing} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='mechanical' value={this.state.mechanical} increase={this.increase} decrease={this.decrease} />
+            <Upgrade name='temporary' value={this.state.temporary} increase={this.increase} decrease={this.decrease} />
+          </div>
         </div>
       </div>
     )
