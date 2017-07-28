@@ -1,5 +1,23 @@
+/* NavBar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #999;
+}
+li {
+  display: inline;
+}
+li a {
+  color: white;
+  padding: 10px;
+}
+li a:hover {
+  color: #111;
+}
 
 
+/* MeritCalculator */
 input {
   width: 20px;
 }
@@ -13,30 +31,22 @@ input {
   overflow-y: scroll;
 }
 .upgrades {
-  /*position: fixed;
-  top: 100px;
-  left: 0;*/
   text-align: right;
   width: 200px;
   margin: 40px;
 }
 .stats {
-  /*position: fixed;
-  top: 50px;
-  left: 200px;*/
   text-align: right;
   width: 200px;
   margin: 40px;
 }
 .weapons {
-  /*position: fixed;
-  top: 50px;
-  left: 400px;*/
   text-align: right;
   width: 200px;
   margin: 40px;
 }
 
+/* App */
 .App {
   text-align: center;
 }

@@ -11,7 +11,9 @@ class PropertyCalcContainer extends Component {
   }
   render() {
     return (
-      <p>{this.state.baseCost}</p>
+      <div>
+        <p>{this.state.baseCost}</p>
+      </div>
     )
   }
 }
