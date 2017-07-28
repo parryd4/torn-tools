@@ -5,25 +5,25 @@ input {
 }
 
 .upgrades {
-  position: fixed;
+  /*position: fixed;
   top: 50px;
-  left: 0;
+  left: 0;*/
   text-align: right;
   width: 200px;
   margin: 40px;
 }
 .stats {
-  position: fixed;
+  /*position: fixed;
   top: 50px;
-  left: 200px;
+  left: 200px;*/
   text-align: right;
   width: 200px;
   margin: 40px;
 }
 .weapons {
-  position: fixed;
+  /*position: fixed;
   top: 50px;
-  left: 400px;
+  left: 400px;*/
   text-align: right;
   width: 200px;
   margin: 40px;
