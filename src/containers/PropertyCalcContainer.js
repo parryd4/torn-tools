@@ -34,14 +34,14 @@ class PropertyCalcContainer extends Component {
       elbt: false,
       propertyBroker: false,
 
-      fullCost: properties.privateIsland.cost,
-      adjustedCost: properties.privateIsland.cost,
+
 
     }
 
     // this.handleInputChange = this.handleInputChange.bind(this)
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
     this.fullCost = this.fullCost.bind(this)
+    this.adjustedCost = this.adjustedCost.bind(this)
   }
 
   handleInputChange(event) {
@@ -69,7 +69,10 @@ class PropertyCalcContainer extends Component {
         total += modifications[key]["cost"]
       }
     })
-
+    return total
+  }
+  adjustedCost(){
+    let total = this.fullCost()
     let adjustment = total
     let upgrades = total - properties.privateIsland.cost
     if (this.state.education) {
@@ -81,17 +84,7 @@ class PropertyCalcContainer extends Component {
     if (this.state.propertyBroker) {
       adjustment -= upgrades / 10
     }
-    this.setState({
-      fullCost: total,
-      adjustedCost: adjustment
-    })
-    // return total
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState !== this.state) {
-      this.fullCost()
-    }
+    return adjustment
   }
 
   render() {
@@ -99,8 +92,8 @@ class PropertyCalcContainer extends Component {
       <div>
         <div className='propertyInfo'>
           <p>{this.state.name}</p>
-          <p>Full Cost: $ {this.state.fullCost}</p>
-          <p>Adjusted Cost: $ {this.state.adjustedCost}</p>
+          <p>Full Cost: $ {this.fullCost().toLocaleString('en')}</p>
+          <p>Adjusted Cost: ${this.adjustedCost().toLocaleString('en')}</p>
         </div>
         <div className='options'>
           <label>
@@ -117,6 +110,8 @@ class PropertyCalcContainer extends Component {
           </label>
         </div>
         <div className='upgrades'>
+        <p>{this.state.name}</p>
+        <p>Full Cost: $ {this.fullCost().toLocaleString('en')}</p>
           <label>
             Hot Tub
             <input name='hotTub' type='checkbox' checked={this.state.hotTub} onChange={this.handleCheckboxChange} />
