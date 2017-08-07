@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropertyModification from '../components/PropertyModification'
 
 const modifications = {
+  superiorInterior: {cost: 250000000, happy: 1000},
   hotTub: {cost: 17000, happy: 25},
   sauna: {cost: 12000, happy: 25},
   openBar: {cost: 9000, happy: 50},
@@ -113,14 +114,20 @@ class PropertyCalcContainer extends Component {
         <p>{this.state.name}</p>
         <p>Full Cost: $ {this.fullCost().toLocaleString('en')}</p>
           <label>
-            Hot Tub
+            Superior Interior
+            <input name='superiorInterior' type='checkbox' checked={this.state.superiorInterior} onChange={this.handleCheckboxChange} />
+            <br />Hot Tub
             <input name='hotTub' type='checkbox' checked={this.state.hotTub} onChange={this.handleCheckboxChange} />
             <br />Sauna
             <input name='sauna' type='checkbox' checked={this.state.sauna} onChange={this.handleCheckboxChange} />
             <br />Open Bar
             <input name='openBar' type='checkbox' checked={this.state.openBar} onChange={this.handleCheckboxChange} />
+            <br />Large Pool
+            <input name='lgPool' type='checkbox' checked={this.state.lgPool} onChange={this.handleCheckboxChange} />
             <br />Advanced Shooting Range
             <input name='advancedShootingRange' type='checkbox' checked={this.state.advancedShootingRange} onChange={this.handleCheckboxChange} />
+            <br />Xl Vault
+            <input name='xlVault' type='checkbox' checked={this.state.xlVault} onChange={this.handleCheckboxChange} />
             <br />Medical Facility
             <input name='medicalFacility' type='checkbox' checked={this.state.medicalFacility} onChange={this.handleCheckboxChange} />
             <br />Airstrip With Plane
