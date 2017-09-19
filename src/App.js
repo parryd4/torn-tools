@@ -12,6 +12,7 @@ class App extends Component {
         <NavBar />
         <Route path='/merits' render={() => <MeritCalculator />} />
         <Route path='/properties' render={() => <PropertyCalcContainer />} />
+        
       </div>
     );
   }

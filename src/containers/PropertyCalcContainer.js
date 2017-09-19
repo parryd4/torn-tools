@@ -126,6 +126,8 @@ class PropertyCalcContainer extends Component {
             <input name='lgPool' type='checkbox' checked={this.state.lgPool} onChange={this.handleCheckboxChange} />
             <br />Advanced Shooting Range
             <input name='advancedShootingRange' type='checkbox' checked={this.state.advancedShootingRange} onChange={this.handleCheckboxChange} />
+            <br />Large Vault
+            <input name='lgVault' type='checkbox' checked={this.state.lgVault} onChange={this.handleCheckboxChange} />
             <br />Xl Vault
             <input name='xlVault' type='checkbox' checked={this.state.xlVault} onChange={this.handleCheckboxChange} />
             <br />Medical Facility
